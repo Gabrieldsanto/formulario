@@ -12,35 +12,35 @@
     <form action="cadastro.php" method="get" autocomplete="on">
 
         <p>
-            <label for="in1">Numero 1:</label>
-            <input type="number" name="n1" id="in1" required min="0" max="50" oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+            <label for="iano">Em que ano você nasceu?</label>
+            <input type="number" name="ano" id="iano" min="1900" max="2022" oninput="calcIdade()">
         </p>
 
         <p>
-            <label for="in2">Numero 2:</label>
-            <input type="number" name="n2" id="in2" required min="0" max="50"  oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+            <label for="iidade">Sua idade é?</label>
+            <output id="iidade">0</output>
         </p>
+
+     
+        
+
+
+
+
 
         <p>
-            <label for="isoma">Soma</label>
-            <output name="soma" id="isoma" >0</output>
-        </p>
-
-
-
-
-
-
-
-
-
-
-<p>
-    <p>
         <input type="submit" value="Enviar">
         <input type="reset" value="limpar">
     </p>
-</p>
+
+    <script>
+
+        function calcIdade() {
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
+
 
 
     </form>
