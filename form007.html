@@ -10,17 +10,42 @@
      
     <h1>Exemplo de </h1>
 
-    <form action="cadastro.php" method="get" autocomplete="on">
+    <form action="cadastro.php" method="post" autocomplete="on">
         <p>
             <label for="iest">Estado</label>
             <select name="estado" id="iest">
-                <option value="SP">São paulo</option>
-                <option value="RJ"> Rio de Janeiro</option>
-                <option value="MG">Minas gerais</option>
+                 
+                <option value="" selected>---Escolha---</option>
+                <optgroup label="Região Sudeste">
+                    <option value="SP">São paulo</option>
+                    <option value="RJ"> Rio de Janeiro</option>
+                    <option value="MG">Minas gerais</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="RN">Rio grande do norte</option>
+                    <option value="MA">Maranhao</option>
+                    <option value="PE"> Pernambuco</option>
+                </optgroup>
 
 
             </select>
         </p>
+
+        <p>
+            <label for="iprof">Profissão</label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option value="adm">Administração</option>
+                <option value="mec">Mecanico</option>
+                <option value="sus">Sushiman</option>
+                <option value="coz">Cozinheiro</option>
+            </datalist>
+        </p>
+        
+        <p>
+            <label for="imsg">Mensagem:</label><br>
+<textarea name="ms" id="imsg" cols="30" rows="10"></textarea>        </p>
 
    
         
@@ -28,6 +53,8 @@
             <input type="submit" value="Enviar">
             <input type="reset" value="limpar">
         </p>
+
+     
 
 
 
